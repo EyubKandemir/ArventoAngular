@@ -1,0 +1,19 @@
+<button (click)="initNewAuthor()">Create New Author</button>
+
+<table>
+  <thead>
+    <th>First Name</th>
+    <th>Last Name</th>
+     <th></th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let author of authors">
+      <td>{{author.author_name}}</td>
+      <td>{{author.author_surname}}</td>
+      <td><button (click)="editAuthor(author)">Edit
+        </button></td>
+    </tr>
+  </tbody>
+</table>
+
+<app-edit-author [author]="authorToEdit" (authorUpdated)="updateAuthorList($event)"></app-edit-author>

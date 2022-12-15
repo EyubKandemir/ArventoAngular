@@ -1,0 +1,18 @@
+<div *ngIf="author">
+  <h2>{{author.author_name}}</h2>
+
+  <div>
+    Name:
+    <input [(ngModel)]="author.author_name" placeholder="Name" />
+  </div>
+
+  <div>
+    Surname:
+    <input [(ngModel)]="author.author_surname" placeholder="Surname" />
+  </div>
+
+  <button (click)="updateAuthor(author)" *ngIf="author.objectid">Save</button>
+  <button (click)="deleteAuthor(author)" *ngIf="author.objectid">Delete</button>
+  <button (click)="createAuthor(author)" *ngIf="!author.objectid">Create</button>
+
+</div>
