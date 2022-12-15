@@ -15,6 +15,9 @@ builder.Services.AddDbContext<UserContext>(options =>
 builder.Services.AddDbContext<AuthorDataContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("MyDbConnection")));
 
+builder.Services.AddDbContext<BookDataContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("MyDbConnection")));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

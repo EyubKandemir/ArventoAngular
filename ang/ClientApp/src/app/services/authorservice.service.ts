@@ -14,7 +14,6 @@ export class AuthorService {
   private Createurl = "CreateAuthor";
   private Deleteurl = "DeleteAuthor";
 
-
   constructor(private http: HttpClient ) { }
 
   //Get List

@@ -27,6 +27,7 @@
 
   <ItemGroup>
     <None Remove="ClientApp\src\app\models\Author.ts" />
+    <None Remove="ClientApp\src\app\services\bookauthorservice.service.ts" />
   </ItemGroup>
 
   <ItemGroup>

@@ -12,6 +12,8 @@ import { AuthorComponent } from './author/author.component';
 import { LoginComponent } from './login/login.component';
 import { EditAuthorComponent } from './edit-author/edit-author.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
+import { BookComponent } from './book/book.component';
+import { EditBookComponent } from './edit-book/edit-book.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
     LoginComponent,
     AuthorComponent,
     EditAuthorComponent,
-    NavMenuComponent
+    NavMenuComponent,
+    BookComponent,
+    EditBookComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -34,7 +38,7 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'author', component: AuthorComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
+      { path: 'book', component: BookComponent },
     ])
   ],
   providers: [],
