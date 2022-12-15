@@ -36,7 +36,7 @@ import { EditBookComponent } from './edit-book/edit-book.component';
     HttpClientModule,
 
     RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
+      { path: 'home', component: HomeComponent, pathMatch: 'full' },
       { path: 'author', component: AuthorComponent },
       { path: 'book', component: BookComponent },
     ])
