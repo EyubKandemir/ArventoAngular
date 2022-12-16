@@ -6,8 +6,5 @@ namespace ang.Models
     {
         public DashboardDataContext(DbContextOptions<DashboardDataContext> options) : base(options) { }
 
-        public int TotalBooks { get; set; }
-        public int TotalAuthors { get; set; }
-
     }
 }

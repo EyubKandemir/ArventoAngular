@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -34,11 +34,11 @@ import { EditBookComponent } from './edit-book/edit-book.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-
     RouterModule.forRoot([
       { path: 'home', component: HomeComponent, pathMatch: 'full' },
       { path: 'author', component: AuthorComponent },
       { path: 'book', component: BookComponent },
+      { path: 'login', component: LoginComponent }
     ])
   ],
   providers: [],

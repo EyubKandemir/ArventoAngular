@@ -1,5 +1,6 @@
 import { Component,OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import {  Router, RouterModule } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 
 @Component({
@@ -9,10 +10,9 @@ import { AuthService } from '../services/auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private loginAuth: AuthService) { }
+  constructor(private loginAuth: AuthService, private router: Router) { }
 
   ngOnInit(): void {
-
   }
 
 
@@ -37,12 +37,10 @@ export class LoginComponent implements OnInit {
 //  }
 
   SubmitClicked() {
-    var rr = this.loginAuth.loginUser([this.loginForm.value.username, this.loginForm.value.pwd])
-    console.log("rrrr + ");
-    console.log(rr);
+   
     var res = this.loginAuth.loginUser([this.loginForm.value.username, this.loginForm.value.pwd]).subscribe();
-    console.log("RES :  ");
-    console.log(res);
+    this.router.navigateByUrl('/home');
+
   }
 
   get Username(): FormControl {
